@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="app">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Codystar" />
-      <h1 className="happy-xmas"/>
+      <h1 className="happy-xmas"> </h1>
       <div id="snow"></div>
       <Header />
       <main className="main">
