@@ -1,0 +1,189 @@
+/* Fuente navideña */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/* Ajustes generales para html y body */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: #9cf;
+  background-image: linear-gradient(rgb(240, 240, 240), #bdf);
+}
+
+/* Contenedor de nieve */
+#snow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Coloca la nieve detrás del contenido */
+}
+
+/* Efecto de nieve */
+.snowflake {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  transform: translateZ(0);
+  background-image: radial-gradient(circle farthest-corner, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Estilos para la app */
+.app {
+  position: relative;
+  z-index: 1; /* Asegura que el contenido esté por encima de la nieve */
+  overflow-y: auto; /* Permite el scroll vertical */
+  min-height: 100vh; /* Asegura que ocupe al menos la altura completa de la pantalla */
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 30px;
+  background: #d32f2f; /* Rojo para el fondo */
+  color: white;
+  border-bottom: 5px solid #d4af37;
+}
+
+/* Título con colores sólidos alternados y resplandor */
+.title {
+  font-size: 3.5rem;
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  color: #ff4f5a; /* Rojo */
+  text-shadow: 0 0 10px #ffbc00, 0 0 30px #ff4f5a, 0 0 40px #ffbc00; /* Resplandor amarillo y rojo */
+  letter-spacing: 2px;
+  animation: colorChange 1s infinite alternate; /* Animación para el cambio de color */
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: #d4af37;
+}
+
+/* Animación para cambiar colores alternados */
+@keyframes colorChange {
+  0% { color: #ff4f5a; }
+  100% { color: #ffbc00; }
+}
+
+/* Main section */
+.main {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 150px); /* Mantiene el área del contenido centrada */
+}
+
+/* Estilo de la tarjeta como regalo */
+.card {
+  background: white;
+  color: #145a32;
+  border-radius: 12px;
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cinta horizontal de regalo (en el fondo) */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: #ff1744; /* Rojo para la cinta */
+  transform: translateY(-50%);
+  z-index: -1; /* En el fondo */
+}
+
+/* Cinta vertical de regalo (en el fondo) */
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 20px;
+  height: 100%;
+  background-color: #ff1744; /* Rojo para la cinta */
+  transform: translateX(-50%);
+  z-index: -1; /* En el fondo */
+}
+
+/* Detalles de la imagen */
+.card-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 2px solid #ff1744; /* Borde rojo alrededor de la imagen */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* Asegura que la imagen esté al frente */
+}
+
+/* Título de la card */
+.card-title {
+  font-size: 1.8rem;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #145a32;
+  z-index: 2;
+}
+
+/* Descripción de la card */
+.card-description {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #333;
+  z-index: 2;
+}
+
+/* Mensaje especial de la card */
+.card-message {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  font-style: italic;
+  color: #ff1744; /* Rojo para el mensaje */
+  z-index: 2;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: #013220;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  border-top: 5px solid #d4af37;
+}
+
+/* Estilo del título "HAPPY XMAS!" */
+h1.happy-xmas {
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font: 10em "Codystar", sans-serif;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Estilo para la frase con texto verde */
+.frase {
+  font-size: 2rem; /* Tamaño más pequeño que el título */
+  margin: 20px 0;
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 0 0 10px #4caf50, 0 0 20px #4caf50, 0 0 30px #4caf50, 0 0 40px #ffbc00, 0 0 70px #ffbc00; /* Efecto de neón */
+  letter-spacing: 2px;
+  text-align: center;
+}
