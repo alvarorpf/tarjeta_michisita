@@ -68,7 +68,7 @@ var Snowflake = (function() {
     this.div.style.transform =
     this.div.style.MozTransform =
     this.div.style.webkitTransform =
-      'translate3d(' + this.x + 'px' + ',' + this.y + 'px,0)';
+      `translate3d(${this.x}px, ${this.y}px, 0)`;
   };
 
   function update() {
